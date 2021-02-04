@@ -6,195 +6,251 @@
 <body>
     <header>
         <h1><u>COVID SCREENING FORM</u></h1>
-        <p id="paragraph1" style='font-family:tahoma; color:rgb(51, 7, 248)'>
-            Please fill out all of the fields below. This information will help determine whether 
-            you need to get tested, treated, or hospitalized. 
-        </p>
     </header>
 
     <section>
-        <h3><u>PERSONAL INFORMATION</u></h3>
-        <article>
-            <h5 style='font-family:tahoma; color:rgb(51, 7, 248)'> Please fill out all of the following fields</h5>
-            <form>
-                <label for="fname">First name:</label><br>		
-                <input type="text" id="fname" name="fname"><br>
-                
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname"><br> <br>
-                
-                <p><b>Gender:</b></p>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label><br>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label><br>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label> <br> <br>
+		<h3>Please fill out all of the fields below</h3>
+		<p id="paragraph1" style='font-family:tahoma; color:rgb(51, 7, 248)'>
+            This information will help determine whether 
+            you need to get tested, treated, or hospitalized. 
+        </p>
+		<article> 
+			<form>
+				<fieldset>
+					<legend> Part 1: Patient Information </legend>
+					<h3><u>PERSONAL INFORMATION</u></h3>
+						<p>
+							<label for="textFirstName">
+								<span>First Name: </span>
+								<strong><abbr title="required">*</abbr> </strong>
+							</label> <br>	
+							<input type="text" id="textFirstName" name="textFirstName" required>
+						</p>
+							
+						<p>
+							<label for="textLastName">
+								<span>Last Name: </span>
+								<strong><abbr title="required">*</abbr> </strong>
+							</label> <br>
+							<input type="text" id="textLastName" name="textLastName" required>
+						</p>
+							
+							<fieldset>
+								<legend>Gender:</legend>
+								<input type="radio" id="rbMale" name="gender" value="male">
+								<label for="rbMale">Male</label>
+								<input type="radio" id="rbFemale" name="gender" value="female">
+								<label for="rbFemale">Female</label>
+								<input type="radio" id="rbOther" name="gender" value="other">
+								<label for="rbOther">Other</label> 
+							</fieldset>
 
-                <label for="phone">Phone Number:</label><br>
-                <input type="text" id="phone" name="phone"><br> <br>
+						<p>
+							<label for="txtTel">Phone Number:</label><br>
+							<input type="tel" id="txtTel" name="txtTel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+						</p> 
 
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email"><br> <br>
+						<p>
+							<label for="txtEmail">
+								<span> Email: </span>
+								<strong><abbr title="required">*</abbr> </strong>
+							</label><br>
+							<input type="email" id="txtEmail" name="txtEmail" required>
+						</p>
+							
+						<p>
+							<label for="txtAddress">Address:</label><br>
+							<input type="text" id="txtAddress" name="txtAddress">
+						</p>
+							
+						<p>
+							<label for="txtDOB">
+								<span> Date of Birth: </span>
+								<strong><abbr title="required">*</abbr> </strong>
+							</label><br>
+							<input type="date" id="txtDOB" name="txtDOB" required>
+						</p> 
+				</fieldset>
+				
+				<br>
+				
+				<fieldset>
+					<legend> Part 2: Symptoms </legend>
+					<h3><u>POTENTIAL SYMPTOMS IN THE LAST 24 HOURS</u></h3>
+							<fieldset>
+								<legend>Fever or chills?</legend>
+									<input type="radio" id="rbFeverYes" name="rbFeverYes" value="yes" required>
+									<label for="rbFeverYes">Yes</label>
+									<input type="radio" id="rbFeverNo" name="rbFeverNo" value="no">
+									<label for="rbFeverNo">No</label>
+							</fieldset>
+							
+							<fieldset>
+								<legend>Cough?</legend>
+									<input type="radio" id="rbCoughYes" name="rbCoughYes" value="yes">
+									<label for="rbCoughYes">Yes</label>
+									<input type="radio" id="rbCoughNo" name="rbCoughNo" value="no">
+									<label for="rbCoughNo">No</label>
+							</fieldset>
+							
+							<fieldset>
+								<legend>Shortness of breath or difficulty breathing?</legend>
+									<input type="radio" id="rbBreathingYes" name="rbBreathingYes" value="yes">
+									<label for="rbBreathingYes">Yes</label>
+									<input type="radio" id="rbBreathingNo" name="rbBreathingNo" value="no">
+									<label for="rbBreathingNo">No</label>
+							</fieldset>
 
-                <label for="address">Address:</label><br>
-                <input type="text" id="address" name="address"><br> <br>
+							<fieldset>
+								<legend>Fatigue?</legend>
+									<input type="radio" id="rbFatigueYes" name="rbFatigueYes" value="yes">
+									<label for="rbFatigueYes">Yes</label>
+									<input type="radio" id="rbFatigueNo" name="rbFatigueNo" value="no">
+									<label for="rbFatigueNo">No</label>
+							</fieldset>
 
-                <label for="DOB">Date of Birth:</label><br>
-                <input type="text" id="DOB" name="DOB"><br> <br>
+							<fieldset>
+								<legend>Muscle or body aches?</legend>
+									<input type="radio" id="rbAcheYes" name="rbAcheYes" value="yes">
+									<label for="rbAcheYes">Yes</label>
+									<input type="radio" id="rbAcheNo" name="rbAcheNo" value="no">
+									<label for="rbAcheNo">No</label>
+							</fieldset>
+
+							<fieldset>
+								<legend>Headache?</legend>
+									<input type="radio" id="rbHeadacheYes" name="rbHeadacheYes" value="yes">
+									<label for="rbHeadacheYes">Yes</label>
+									<input type="radio" id="rbHeadacheNo" name="rbHeadacheNo" value="no">
+									<label for="rbHeadacheNo">No</label>
+							</fieldset>
+
+							<fieldset>
+								<legend>New loss of taste or smell?</legend>
+									<input type="radio" id="rbSmellLossYes" name="rbSmellLossYes" value="yes">
+									<label for="rbSmellLossYes">Yes</label>
+									<input type="radio" id="rbSmellLossNo" name="rbSmellLossNo" value="no">
+									<label for="rbSmellLossNo">No</label>
+							</fieldset>
+
+							<fieldset>
+								<legend>Sore Throat?</legend>
+									<input type="radio" id="rbSoreThroatYes" name="rbSoreThroatYes" value="yes">
+									<label for="rbSoreThroatYes">Yes</label>
+									<input type="radio" id="rbSoreThroatNo" name="rbSoreThroatNo" value="no">
+									<label for="rbSoreThroatNo">No</label>
+							</fieldset>
+
+							<fieldset>
+								<legend>Congestion or runny nose?</legend>
+									<input type="radio" id="rbCongestionYes" name="rbCongestionYes" value="yes">
+									<label for="rbCongestionYes">Yes</label>
+									<input type="radio" id="rbCongestionNo" name="rbCongestionNo" value="no">
+									<label for="rbCongestionNo">No</label>
+							</fieldset>
+
+							<fieldset>
+								<legend>Nausea or vomiting?</legend>
+									<input type="radio" id="rbNauseaYes" name="rbNauseaYes" value="yes">
+									<label for="rbNauseaYes">Yes</label>
+									<input type="radio" id="rbNauseaNo" name="rbNauseaNo" value="no">
+									<label for="rbNauseaNo">No</label>
+							</fieldset>
+							
+							<fieldset>
+								<legend>Diarrhea?</legend>
+									<input type="radio" id="rbDiarrheaYes" name="rbDiarrheaYes" value="yes">
+									<label for="rbDiarrheaYes">Yes</label>
+									<input type="radio" id="rbDiarrheaNo" name="rbDiarrheaNo" value="no">
+									<label for="rbDiarrheaNo">No</label>
+							</fieldset> 
+				</fieldset>
+				
+				<br> 
+				
+				<fieldset>
+					<legend> Part 3: Others Questions </legend>
+					<h3><u>OTHER QUESTIONS</u></h3>
+						<p>
+							<label for="ddContact">
+								<span> Have you had contact (within 6 feet for > 15 minutes), or caring 
+									   for someone who is diagnosed with COVID-19 in the last 14 days and were not wearing 
+									   proper personal protective equipment? </span>
+							<strong><abbr title="required">*</abbr> </strong>
+							<br>
+							</label>
+							
+							<select id="ddContact" name="ddContact">
+								<option value="No" selected> No </option>
+								<option value="Yes"> Yes </option>
+							</select>
+						</p>
+
+						<p>
+							<label for="ddDiagnosis">
+								<span> Have you had a diagnosis of COVID-19 in the last 10 days? </span>
+							<strong><abbr title="required">*</abbr> </strong>
+							<br>
+							</label>
+							
+							<select id="ddDiagnosis" name="ddDiagnosis">
+								<option value="No" selected> No </option>
+								<option value="Yes"> Yes </option>
+							</select>
+						</p>
+
+						<div>
+							<label for="ddTravel">
+								<span> Have you travelled to any country in the last 14 days? </span>
+								<strong><abbr title="required">*</abbr> </strong>
+							<br>
+							</label>
+							
+							<select id="ddTravel" name="ddTravel">
+								<option value="No" selected> No </option>
+								<option value="Yes"> Yes </option>
+							</select>
+							<br>
+							
+							<div>
+								<label for="txtCountry">
+									<span> If yes, what countries (seperate with commas):</span>
+									<strong><abbr title="required">*</abbr> </strong>	
+								</label>
+								<input type="text" id="txtCountry" name="txtCountry" required><br>
+							</div>
+						</div>
+
+						<p>
+							<label for="ddSocialize">
+								<span> Have you socialized with a group of 6 or more people in the last 14 days? </span>
+								<strong><abbr title="required">*</abbr> </strong>
+								<br>
+							</label>
+							
+							<select id="ddSocialize" name="ddSocialize">
+								<option value="No" selected> No </option>
+								<option value="Yes"> Yes </option>
+							</select>
+						</p>
+
+						<p>
+						<label for="txtTemperature">
+							<span> Current temperature: </span>
+							<strong><abbr title="required">*</abbr> </strong>
+						</label>	
+						<input type="text" id="txtTemperature" name="txtTemperature" required>
+						</p>
+
+					</fieldset>
+					
+					<p>
+						<input type = "reset" value="Clear Fields">
+						<button type="submit"> Submit </button> <br> <br>
+					</p>
             </form>
         </article>
     </section>
-
-    <section>
-        <h3><u>POTENTIAL SYMPTOMS IN THE LAST 24 HOURS</u></h3>
-        <article>
-            <h5 style='font-family:tahoma; color:rgb(51, 7, 248)'> Please answer all of the screening question to the best of your ability</h5>
-            <form>
-                <p><b>Fever or chills?</b></p>
-                <input type="radio" id="symptom1yes" name="symptom1" value="yes">
-                <label for="symptom1yes">Yes</label>
-                <input type="radio" id="symptom1no" name="symptom1" value="no">
-                <label for="symptom1no">No</label><br>
-
-                <br>
-
-                <p><b>Cough?</b></p>
-                <input type="radio" id="symptom2yes" name="symptom2" value="yes">
-                <label for="symptom2yes">Yes</label>
-                <input type="radio" id="symptom2no" name="symptom2" value="no">
-                <label for="symptom2no">No</label><br>
-
-                <br>
-
-                <p><b>Shortness of breath or difficulty breathing?</b></p>
-                <input type="radio" id="symptom3yes" name="symptom3" value="yes">
-                <label for="symptom3yes">Yes</label>
-                <input type="radio" id="symptom3no" name="symptom3" value="no">
-                <label for="symptom3no">No</label><br>
-
-                <br>
-
-                <p><b>Fatigue?</b></p>
-                <input type="radio" id="symptom4yes" name="symptom4" value="yes">
-                <label for="symptom4yes">Yes</label>
-                <input type="radio" id="symptom4no" name="symptom4" value="no">
-                <label for="symptom4no">No</label><br>
-
-                <br>
-
-                <p><b>Muscle or body aches?</b></p>
-                <input type="radio" id="symptom5yes" name="symptom5" value="yes">
-                <label for="symptom5yes">Yes</label>
-                <input type="radio" id="symptom5no" name="symptom5" value="no">
-                <label for="symptom5no">No</label><br>
-
-                <br>
-
-                <p><b>Headache?</b></p>
-                <input type="radio" id="symptom6yes" name="symptom6" value="yes">
-                <label for="symptom6yes">Yes</label>
-                <input type="radio" id="symptom6no" name="symptom6" value="no">
-                <label for="symptom6no">No</label><br>
-
-                <br>
-
-                <p><b>New loss of taste or smell?</b></p>
-                <input type="radio" id="symptom7yes" name="symptom7" value="yes">
-                <label for="symptom7yes">Yes</label>
-                <input type="radio" id="symptom7no" name="symptom7" value="no">
-                <label for="symptom7no">No</label><br>
-
-                <br>
-
-                <p><b>Sore Throat?</b></p>
-                <input type="radio" id="symptom8yes" name="symptom8" value="yes">
-                <label for="symptom8yes">Yes</label>
-                <input type="radio" id="symptom8no" name="symptom8" value="no">
-                <label for="symptom8no">No</label><br>
-
-                <br>
-
-                <p><b>Congestion or runny nose?</b></p>
-                <input type="radio" id="symptom9yes" name="symptom9" value="yes">
-                <label for="symptom9yes">Yes</label>
-                <input type="radio" id="symptom9no" name="symptom9" value="no">
-                <label for="symptom9no">No</label><br>
-
-                <br>
-
-                <p><b>Nausea or vomiting?</b></p>
-                <input type="radio" id="symptom10yes" name="symptom10" value="yes">
-                <label for="symptom10yes">Yes</label>
-                <input type="radio" id="symptom10no" name="symptom10" value="no">
-                <label for="symptom10no">No</label><br>
-
-                <br>
-
-                <p><b>Diarrhea?</b></p>
-                <input type="radio" id="symptom11yes" name="symptom11" value="yes">
-                <label for="symptom11yes">Yes</label>
-                <input type="radio" id="symptom11no" name="symptom11" value="no">
-                <label for="symptom11no">No</label><br>
-            </form>
-        </article>
-    </section>
-    <br>
-
-    <section>
-        <h3><u>OTHER QUESTIONS</u></h3>
-        <article>
-            <h5 style='font-family:tahoma; color:rgb(51, 7, 248)'> Please fill out all of the following fields</h5>
-            <form>
-                <p><b>Have you had contact (within 6 feet for > 15 minutes), or caring 
-                    for someone who is diagnosed with COVID-19 in the last 14 days and were not wearing 
-                    proper personal protective equipment?</b></p>  
-                <input type="radio" id="other1yes" name="other1" value="yes">
-                <label for="other1yes">Yes</label>
-                <input type="radio" id="other1no" name="other1" value="no">
-                <label for="other1no">No</label><br>
-
-                <br>
-
-                <p><b>Have you had a diagnosis of COVID-19 in the last 10 days?</b></p>
-                <input type="radio" id="other2yes" name="other2" value="yes">
-                <label for="other2yes">Yes</label>
-                <input type="radio" id="other2no" name="other2" value="no">
-                <label for="other2no">No</label><br>
-
-                <br>
-
-                <p><b>Have you travelled to any country in the last 14 days?</b></p>
-                <input type="radio" id="other3yes" name="other3" value="yes">
-                <label for="other3yes">Yes</label>
-                <input type="radio" id="other3no" name="other3" value="no">
-                <label for="other3no">No</label><br> <br>
-
-                <label for="country">If yes, what countries:</label><br>		
-                <input type="text" id="country" name="country"><br>
-
-                <br>
-
-                <p><b>Have you socialized with a group of 6 or more people in the last 14 days?</b></p>
-                <input type="radio" id="other4yes" name="other4" value="yes">
-                <label for="other4yes">Yes</label>
-                <input type="radio" id="other4no" name="other4" value="no">
-                <label for="other4no">No</label><br>
-
-                <br>
-
-                <label for="temperature">Current temperature:</label><br>		
-                <input type="text" id="temperature" name="temperature"><br>
-
-                <br>
-                
-                <input type = "reset" value="Clear Fields">
-
-            </form>
-        </article>
-    </section>
-    <br>
-    <button> Submit </button> <br>
     <footer> Copyright @2021 COVID Center</footer>
 </body>
 </html>
