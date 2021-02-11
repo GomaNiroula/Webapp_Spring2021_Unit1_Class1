@@ -1,2 +1,2 @@
-# COVID Patient Screening Form
-#### Problem Statement: Given the COVID19 risks for patients, design a simple web application that allows users to enter their data and other questions regarding potential symptoms.The web app can then uses this self-proclaimed information to determine whether the patient needs to get tested, treated, or hospitalized.
+# Web App Development Unit 1 Classwork
+#### This repository contains all of the classwork for Unit 1
