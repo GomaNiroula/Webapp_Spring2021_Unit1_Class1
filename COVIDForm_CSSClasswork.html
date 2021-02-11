@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>COVID Center</title>
+    <title >COVID Center</title>
+    <style>
+      .centerText {
+        text-align: center;
+      }
+      .addBorder {
+        border: 3px solid rgb(7, 0, 0);
+      }
+    </style>
   </head>
   <body>
+
     <header>
-      <h1><u>COVID Screening Form</u></h1>
+      <div class="centerText addBorder">
+        <img src="https://img.icons8.com/bubbles/2x/form.png" alt="COVID Form">
+        <h1>COVID SCREENING FORM</h1>
+      </div>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </header>
 
     <section>
-      <h5> Please fill out all of the fields below </h5>
-      <!-- <p id="paragraph1" style="font-family: tahoma; color: rgb(51, 7, 248)">
-        This information will help determine whether you need to get tested,
-        treated, or hospitalized.
-      </p> -->
+      <div class="centerText">
+        <h5>Please Fill out All of the Fields Below to the Best of Your Ability</h5>
+        <p id="paragraph1" style="color: rgb(106, 8, 235)">
+          This information will help determine whether you need to get tested,
+          treated, or hospitalized.
+        </p>
+      </div>
       <article>
         <form>
-          <fieldset class="border">
-            <legend class="w-auto">Part 1: Patient Information</legend>
+          <fieldset class="addBorder">
+            <legend class="centerText addBorder">Part 1: Patient Information</legend>
             
             <div class="form-group row">
               <div class="col-sm-2">
@@ -26,7 +40,7 @@
                   <span>First Name: </span>
                 </label>
               </div>
-              <div class="col-sm-10">
+              <div class="col-sm-4">
                 <input type="text" id="textFirstName" name="textFirstName" class="form-control" placeholder="John" required />
               </div>
             </div>
@@ -37,7 +51,7 @@
                   <span>Last Name: </span>
                 </label>
               </div>
-              <div class="col-sm-10">
+              <div class="col-sm-4">
                 <input type="text" id="textLastName" name="textLastName" class="form-control" placeholder="Doe" required/>
               </div>
             </div>
@@ -46,7 +60,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Gender:</legend>
               
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                     <input type="radio" id="rbMale" name="gender" value="male" class="form-check-input">
                     <label for="rbMale" class="form-check-label">Male</label>
@@ -68,7 +82,7 @@
             <div class="row form-group">
               <label for="txtTel" class="col-sm-2 col-form-label">Phone Number:</label>
 
-              <div class="col-sm-10">
+              <div class="col-sm-4">
                 <input type="tel" id="txtTel" name="txtTel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" required placeholder="000-111-2222">
               </div>
             </div>
@@ -76,7 +90,7 @@
             <div class="row form-group">
               <label for="txtEmail" class="col-sm-2 col-form-label"> Email: </label>
               
-              <div class="col-sm-10">
+              <div class="col-sm-4">
                 <input type="email" id="txtEmail" name="txtEmail" required class="form-control" placeholder="johndoe@example.com">
               </div>
             </div>
@@ -104,21 +118,22 @@
             <div class="row form-group">
               <label for="txtDOB" class="col-sm-2 col-form-label"> Date of Birth: </label>
 
-              <div class="col-sm-10">
+              <div class="col-sm-4">
                 <input type="date" id="txtDOB" name="txtDOB" class="form-control" required>
               </div>
             </div>
           </fieldset>
 
-          <fieldset class="border">
-            <legend class="w-auto">Part 2: Potential Symptoms in the Last 24 Hours</legend>
-            <h5>If you have had any of the following symptoms, please select yes</h5>
+          <br> <br>
+          <fieldset class="addBorder">
+            <legend class="centerText addBorder">Part 2: Potential Symptoms in the Last 24 Hours</legend>
+            <h5 class="centerText">If You have had any of the Following Symptoms, please select Yes</h5>
             
             <fieldset class="border form-group">
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Fever or chills?</legend>
 
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                     <input type="radio" id="rbFeverYes" name="rbFeverYes" value="yes" class="form-check-input">
                     <label for="rbFeverYes" class="form-check-label">Yes</label>
@@ -136,7 +151,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Cough?</legend>
 
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                     <input type="radio" id="rbCoughYes" name="rbCoughYes" value="yes" class="form-check-input">
                     <label for="rbCoughYes" class="form-check-label">Yes</label>
@@ -154,7 +169,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Shortness of breath or difficulty breathing?</legend>
           
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbBreathingYes" name="rbBreathingYes" value="yes" class="form-check-input">
                       <label for="rbBreathingYes" class="form-check-label">Yes</label>
@@ -172,7 +187,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Fatigue?</legend>
 
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbFatigueYes" name="rbFatigueYes" value="yes" class="form-check-input">
                       <label for="rbFatigueYes" class="form-check-label">Yes</label>
@@ -190,7 +205,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Muscle or body aches?</legend>
           
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbAcheYes" name="rbAcheYes" value="yes" class="form-check-input">
                       <label for="rbAcheYes" class="form-check-label">Yes</label>
@@ -208,7 +223,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Headache?</legend>
 
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbHeadacheYes" name="rbHeadacheYes" value="yes" class="form-check-input">
                       <label for="rbHeadacheYes" class="form-check-label">Yes</label>
@@ -226,7 +241,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">New loss of taste or smell?</legend>
           
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbSmellLossYes" name="rbSmellLossYes" value="yes" class="form-check-input">
                       <label for="rbSmellLossYes" class="form-check-label">Yes</label>
@@ -244,7 +259,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Sore Throat?</legend>
           
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbSoreThroatYes" name="rbSoreThroatYes" value="yes" class="form-check-input">
                       <label for="rbSoreThroatYes" class="form-check-label">Yes</label>
@@ -262,7 +277,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Congestion or runny nose?</legend>
           
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbCongestionYes" name="rbCongestionYes" value="yes" class="form-check-input">
                       <label for="rbCongestionYes" class="form-check-label">Yes</label>
@@ -280,7 +295,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label" >Nausea or vomiting?</legend>
           
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbNauseaYes" name="rbNauseaYes" value="yes" class="form-check-input">
                       <label for="rbNauseaYes" class="form-check-label">Yes</label>
@@ -298,7 +313,7 @@
               <div class="row">
                 <legend class="col-sm-2 col-form-label">Diarrhea?</legend>
           
-                <div class="col-sm-10">
+                <div class="col-sm-4">
                   <div class="form-check">
                       <input type="radio" id="rbDiarrheaYes" name="rbDiarrheaYes" value="yes" class="form-check-input">
                       <label for="rbDiarrheaYes" class="form-check-label">Yes</label>
@@ -312,9 +327,10 @@
               </div>
             </fieldset>
 
-          <fieldset class="border">
-            <legend class="w-auto">Part 3: Others Questions</legend>
-            <h6>Please Answer the Remaining Questions</h6>
+          <br> <br>
+          <fieldset class="addBorder">
+            <legend class="centerText addBorder">Part 3: Others Questions</legend>
+            <h5 class="centerText">Please Answer the Remaining Questions</h5>
             
             <div class="row form-group">
               <label for="ddContact" class="col-sm-6 col-form-label">
@@ -325,7 +341,6 @@
               </label>
               
               <div class="col-sm-6">
-                
                 <select id="ddContact" name="ddContact" class="form-label">
                   <option value="No" selected>No</option>
                   <option value="Yes">Yes</option>
@@ -347,13 +362,11 @@
             </div>
 
             <div class="row form-group">
-              <!-- Label goes here -->
               <label for="ddTravel" class="col-sm-6 col-form-label">
                 Have you travelled to any country in the last 14 days?
               </label>
               
               <div class="col-sm-6">
-                <!-- input goes here -->
                 <select id="ddTravel" name="ddTravel" class="form-label">
                   <option value="No" selected>No</option>
                   <option value="Yes">Yes</option>
@@ -362,13 +375,11 @@
             </div>
 
             <div class="row form-group">
-              <!-- Label goes here -->
               <label for="txtCountry" class="col-sm-6 col-form-label">
                 If yes, what countries (seperate with commas):
               </label>
               
               <div class="col-sm-6">
-                <!-- input goes here -->
                 <div class="col-sm-6">
                   <input type="text" id="txtCountry" name="txtCountry" class="form-check-input" required placeholder="Country 1, Country 2">
                 </div>
@@ -376,14 +387,12 @@
             </div>
 
             <div class="row form-group">
-              <!-- Label goes here -->
               <label for="ddSocialize" class="col-sm-6 col-form-label">
                 Have you socialized with a group of 6 or more people in the
                 last 14 days?
               </label>
               
               <div class="col-sm-6">
-                <!-- input goes here -->
                 <select id="ddSocialize" name="ddSocialize" class="form-label">
                   <option value="No" selected>No</option>
                   <option value="Yes">Yes</option>
@@ -392,13 +401,11 @@
             </div>
 
             <div class="row form-group">
-              <!-- Label goes here -->
               <label for="txtTemperature" class="col-sm-6 col-form-label">
                 Current temperature:
               </label>
               
               <div class="col-sm-6">
-                <!-- input goes here -->
                 <div class="col-sm-6">
                   <input type="text" id="txtTemperature" name="txtTemperature" class="form-check-input" required placeholder="70">
                 </div>
