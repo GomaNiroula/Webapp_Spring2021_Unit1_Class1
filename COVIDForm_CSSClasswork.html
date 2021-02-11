@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>COVID Center</title>
+  </head>
+  <body>
+    <header>
+      <h1><u>COVID Screening Form</u></h1>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </header>
+
+    <section>
+      <h5>Please fill out all of the fields below</h5>
+      <!-- <p id="paragraph1" style="font-family: tahoma; color: rgb(51, 7, 248)">
+        This information will help determine whether you need to get tested,
+        treated, or hospitalized.
+      </p> -->
+      <article>
+        <form>
+          <fieldset class="border">
+            <legend class="w-auto">Part 1: Patient Information</legend>
+            
+            <div class="form-group row">
+              <div class="col-sm-2">
+                <label for="textFirstName" class="col-form-label">
+                  <span>First Name: </span>
+                </label>
+              </div>
+              <div class="col-sm-10">
+                <input type="text" id="textFirstName" name="textFirstName" class="form-control" placeholder="John" required />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-2">
+                <label for="textLastName" class="col-form-label">
+                  <span>Last Name: </span>
+                </label>
+              </div>
+              <div class="col-sm-10">
+                <input type="text" id="textLastName" name="textLastName" class="form-control" placeholder="Doe" required/>
+              </div>
+            </div>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Gender:</legend>
+              
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input type="radio" id="rbMale" name="gender" value="male" class="form-check-input">
+                    <label for="rbMale" class="form-check-label">Male</label>
+                  </div>
+                  
+                  <div class="form-check">
+                    <input type="radio" id="rbFemale" name="gender" value="female" class="form-check-input">
+                    <label for="rbFemale" class="form-check-label"> Female </label>
+                  </div>
+                  
+                  <div class="form-check">
+                    <input type="radio" id="rbOther" name="gender" value="other" class="form-check-input">
+                    <label for="rbOther"class="form-check-label">Other</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="row form-group">
+              <label for="txtTel" class="col-sm-2 col-form-label">Phone Number:</label>
+
+              <div class="col-sm-10">
+                <input type="tel" id="txtTel" name="txtTel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" required placeholder="000-111-2222">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label for="txtEmail" class="col-sm-2 col-form-label"> Email: </label>
+              
+              <div class="col-sm-10">
+                <input type="email" id="txtEmail" name="txtEmail" required class="form-control" placeholder="johndoe@example.com">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label for="txtStreet" class="col-sm-2 col-form-label">Address:</label>
+              
+              <div class="col-sm-12 col-md-6">
+                <input type="text" id="txtStreet" name="txtStreet" class="form-control" required placeholder="Street">
+              </div>
+
+              <div class="col">
+                <input type="text" id="txtCity" name="txtCity" class="form-control" required placeholder="City">
+              </div>
+
+              <div class="col">
+                <input type="text" id="txtState" name="txtState" class="form-control" required placeholder="State">
+              </div>
+
+              <div class="col">
+                <input type="text" id="txtZip" name="txtZip" class="form-control" required placeholder="Zip Code" pattern="[0-9]{5}">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label for="txtDOB" class="col-sm-2 col-form-label"> Date of Birth: </label>
+
+              <div class="col-sm-10">
+                <input type="date" id="txtDOB" name="txtDOB" class="form-control" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="border">
+            <legend class="w-auto">Part 2: Potential Symptoms in the Last 24 Hours</legend>
+            <h5>If you have had any of the following symptoms, please select yes</h5>
+            
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Fever or chills?</legend>
+
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input type="radio" id="rbFeverYes" name="rbFeverYes" value="yes" class="form-check-input">
+                    <label for="rbFeverYes" class="form-check-label">Yes</label>
+                  </div>
+            
+                  <div class="form-check">
+                    <input type="radio" id="rbFeverNo" name="rbFeverNo" value="no" class="form-check-input">
+                    <label for="rbFeverNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Cough?</legend>
+
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input type="radio" id="rbCoughYes" name="rbCoughYes" value="yes" class="form-check-input">
+                    <label for="rbCoughYes" class="form-check-label">Yes</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input type="radio" id="rbCoughNo" name="rbCoughNo" value="no" class="form-check-input">
+                    <label for="rbCoughNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Shortness of breath or difficulty breathing?</legend>
+          
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbBreathingYes" name="rbBreathingYes" value="yes" class="form-check-input">
+                      <label for="rbBreathingYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbBreathingNo" name="rbBreathingNo" value="no" class="form-check-input">
+                    <label for="rbBreathingNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Fatigue?</legend>
+
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbFatigueYes" name="rbFatigueYes" value="yes" class="form-check-input">
+                      <label for="rbFatigueYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbFatigueNo" name="rbFatigueNo" value="no" class="form-check-input">
+                    <label for="rbFatigueNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Muscle or body aches?</legend>
+          
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbAcheYes" name="rbAcheYes" value="yes" class="form-check-input">
+                      <label for="rbAcheYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbAcheNo" name="rbAcheNo" value="no" class="form-check-input">
+                    <label for="rbAcheNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Headache?</legend>
+
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbHeadacheYes" name="rbHeadacheYes" value="yes" class="form-check-input">
+                      <label for="rbHeadacheYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbHeadacheNo" name="rbHeadacheNo" value="no" class="form-check-input">
+                    <label for="rbHeadacheNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">New loss of taste or smell?</legend>
+          
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbSmellLossYes" name="rbSmellLossYes" value="yes" class="form-check-input">
+                      <label for="rbSmellLossYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbSmellLossNo" name="rbSmellLossNo" value="no" class="form-check-input">
+                    <label for="rbSmellLossNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+        
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Sore Throat?</legend>
+          
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbSoreThroatYes" name="rbSoreThroatYes" value="yes" class="form-check-input">
+                      <label for="rbSoreThroatYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbSoreThroatNo" name="rbSoreThroatNo" value="no" class="form-check-input">
+                    <label for="rbSoreThroatNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Congestion or runny nose?</legend>
+          
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbCongestionYes" name="rbCongestionYes" value="yes" class="form-check-input">
+                      <label for="rbCongestionYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbCongestionNo" name="rbCongestionNo" value="no" class="form-check-input">
+                    <label for="rbCongestionNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label" >Nausea or vomiting?</legend>
+          
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbNauseaYes" name="rbNauseaYes" value="yes" class="form-check-input">
+                      <label for="rbNauseaYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbNauseaNo" name="rbNauseaNo" value="no" class="form-check-input">
+                    <label for="rbNauseaNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="border form-group">
+              <div class="row">
+                <legend class="col-sm-2 col-form-label">Diarrhea?</legend>
+          
+                <div class="col-sm-10">
+                  <div class="form-check">
+                      <input type="radio" id="rbDiarrheaYes" name="rbDiarrheaYes" value="yes" class="form-check-input">
+                      <label for="rbDiarrheaYes" class="form-check-label">Yes</label>
+                  </div>
+          
+                  <div class="form-check">
+                    <input type="radio" id="rbDiarrheaNo" name="rbDiarrheaNo" value="no" class="form-check-input">
+                    <label for="rbDiarrheaNo" class="form-check-label">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+          <fieldset class="border">
+            <legend class="w-auto">Part 3: Others Questions</legend>
+            <h6>Please Answer the Remaining Questions</h6>
+            
+            <div class="row form-group">
+              <label for="ddContact" class="col-sm-6 col-form-label">
+                Have you had contact (within 6 feet for > 15 minutes), or
+                caring for someone who is diagnosed with COVID-19 in the last
+                14 days and were not wearing proper personal protective
+                equipment?
+              </label>
+              
+              <div class="col-sm-6">
+                
+                <select id="ddContact" name="ddContact" class="form-label">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label for="ddDiagnosis" class="col-sm-6 col-form-label"> 
+                Have you had a diagnosis of COVID-19 in the last 10 days? 
+              </label>
+              
+              <div class="col-sm-6">
+                <select id="ddDiagnosis" name="ddDiagnosis" class="form-label">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <!-- Label goes here -->
+              <label for="ddTravel" class="col-sm-6 col-form-label">
+                Have you travelled to any country in the last 14 days?
+              </label>
+              
+              <div class="col-sm-6">
+                <!-- input goes here -->
+                <select id="ddTravel" name="ddTravel" class="form-label">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <!-- Label goes here -->
+              <label for="txtCountry" class="col-sm-6 col-form-label">
+                If yes, what countries (seperate with commas):
+              </label>
+              
+              <div class="col-sm-6">
+                <!-- input goes here -->
+                <div class="col-sm-6">
+                  <input type="text" id="txtCountry" name="txtCountry" class="form-check-input" required placeholder="Country 1, Country 2">
+                </div>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <!-- Label goes here -->
+              <label for="ddSocialize" class="col-sm-6 col-form-label">
+                Have you socialized with a group of 6 or more people in the
+                last 14 days?
+              </label>
+              
+              <div class="col-sm-6">
+                <!-- input goes here -->
+                <select id="ddSocialize" name="ddSocialize" class="form-label">
+                  <option value="No" selected>No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <!-- Label goes here -->
+              <label for="txtTemperature" class="col-sm-6 col-form-label">
+                Current temperature:
+              </label>
+              
+              <div class="col-sm-6">
+                <!-- input goes here -->
+                <div class="col-sm-6">
+                  <input type="text" id="txtTemperature" name="txtTemperature" class="form-check-input" required placeholder="70">
+                </div>
+              </div>
+            </div>
+
+          <p>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="reset" value="Clear Fields" class="btn btn-secondary">
+            <br />
+          </p>
+        </form>
+      </article>
+    </section>
+    <footer>Copyright @2021 COVID Center</footer>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  </body>
+</html>
