@@ -1,0 +1,19 @@
+.invisible{
+    display: none;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.addBorder {
+    border: 3px solid rgb(7, 0, 0);
+}
+
+.errorMessage{
+    color: red;
+}
+
+.hasError{
+    background-color: yellow;
+}
