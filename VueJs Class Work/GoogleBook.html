@@ -34,7 +34,7 @@
             <div id="mainDiv">
                 <div class="row col-sm-5" v-if="result != null">Found {{ (result != null)?result.totalItems:''}}</div>
                 <div class="row">
-                    <book-dispaly v-if="result != null" v-for="(book, index) in result.items" :key="book.id" :book="JSON.stringify(book)"></book-dispaly>
+                    <book-display v-if="result != null" v-for="(book, index) in result.items" :key="book.id" :book="JSON.stringify(book)"></book-display>
                 </div>
             </div>
         </div>
